@@ -10,14 +10,14 @@
 </head>
 <body>
   <div id="header">
-      Header default <a href="foo.html">Foo</a><br>
-      Header default <a href="bar.html">Bar</a>
+    Header foo <a href="foo.html">Foo</a><br>
+    Header foo <a href="bar.html">Bar</a>
   </div>
   <div id="content">
-     Content default <a href="index.html">Index</a>
+     Content foo <a href="index.html">Index</a>
   </div>
   <div id="footer">
-    Static content: this part will not change if navigating to a page without this surface. [INDEX]
+    Static content: this part will not change if navigating to a page without this surface. [FOO]
   </div>
 
   <!-- Initializing Senna -->
@@ -25,9 +25,9 @@
     'use strict';
     var app = new senna.App();
     app.setBasePath('/');
-    app.addSurfaces(['header', 'content', 'footer']);
+    app.addSurfaces(['header', 'content']);
     app.addRoutes([
-     {
+      {
         path: '/index.html',
         handler: senna.HtmlScreen
       },
