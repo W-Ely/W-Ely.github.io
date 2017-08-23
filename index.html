@@ -1,30 +1,29 @@
 <!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Senna - my first blazing fast website</title>
-  <link rel="stylesheet" href="static/css/styles.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/senna.js/2.1.5/senna.css">
-</head>
-<body data-senna data-senna-surface>
-  <a href="/page1.html">Page 1</a>
-  <a data-senna-off="true" href="/page2.html">Page 2</a>
-  <!-- Content surface -->
-  <div id="content">
-    Default content of my website.
-    <form id="loginForm" data-senna-off>
-      <input name="username">
-      <input name="password">
-      <button type="submit">
-    </form>
-    <form id="feedbackForm">
-      <input name="content">
-      <button type="submit">
-    </form>
-  </div>
-  <!-- End of content surface -->
-  <!-- <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script> -->
-  <script src="https://cdn.jsdelivr.net/senna.js/2.1.5/senna-min.js"></script>
-  <script src="static/js/script.js"></script>
-</body>
+<html ng-app="myApp">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+  </head>
+  <body>
+    <script type="text/ng-template" id="pages/home.html">
+      <h1>Home</h1>
+      <h3>{{message}}</h3>
+    </script>
+    <script type="text/ng-template" id="pages/blog.html">
+      <h1>Blog</h1>
+      <h3>{{message}}</h3>
+    </script>
+    <script type="text/ng-template" id="pages/about.html">
+      <h1>About</h1>
+      <h3>{{message}}</h3>
+    </script>
+
+    <a href="#/">Home</a>
+    <a href="#/blog">Blog</a>
+    <a href="#/about">About</a>
+
+    <div ng-view></div>
+
+    <script src="static/js/script.js"></script>
+  </body>
 </html>
