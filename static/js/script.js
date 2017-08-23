@@ -1,6 +1,6 @@
 var app = angular.module('myApp', ['ngRoute']);
 
-app.config(function($routeProvider, $locationProvider) {
+app.config(function($routeProvider) {
   $routeProvider
 
   .when('/', {
@@ -19,8 +19,6 @@ app.config(function($routeProvider, $locationProvider) {
   })
 
   .otherwise({redirectTo: '/'});
-  // use the HTML5 History API
-  $locationProvider.html5Mode(true);
 });
 
 app.controller('HomeController', function($scope) {
