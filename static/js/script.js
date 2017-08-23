@@ -1,5 +1,5 @@
 var app = new senna.App();
-app.setBasePath('/examples/mysite/pages/');
+app.setBasePath('/');
 app.addSurfaces('content');
 app.addRoutes([
   new senna.Route('page1.html', senna.HtmlScreen),
