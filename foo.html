@@ -22,25 +22,6 @@
   </div>
 
   <!-- Initializing Senna -->
-  <script>
-    'use strict';
-    var app = new senna.App();
-    app.setBasePath('/');
-    app.addSurfaces(['header', 'footer']);
-    app.addRoutes([
-      {
-        path: '/index.html',
-        handler: senna.HtmlScreen
-      },
-      {
-        path: '/foo.html',
-        handler: senna.HtmlScreen
-      },
-      {
-        path: '/bar.html',
-        handler: senna.HtmlScreen
-      }
-    ]);
-  </script>
+  <script scr="/static/js/script.js"></script>
 </body>
 </html>
