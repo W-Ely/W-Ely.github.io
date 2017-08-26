@@ -1,4 +1,6 @@
 'use strict';
+
+// Senna related
 var app = new senna.App();
 app.setBasePath('/');
 app.addRoutes([
@@ -15,3 +17,5 @@ app.addRoutes([
     handler: senna.HtmlScreen
   }
 ]);
+
+// Jquery Tab class manipulation
