@@ -7,11 +7,11 @@ app.addRoutes([
     handler: senna.HtmlScreen
   },
   {
-    path: '/foo.html',
+    path: '/services.html',
     handler: senna.HtmlScreen
   },
   {
-    path: '/bar.html',
+    path: '/contact.html',
     handler: senna.HtmlScreen
   }
 ]);
